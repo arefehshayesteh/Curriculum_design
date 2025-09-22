@@ -72,10 +72,11 @@ def create_table(db):
             db.execute('''
                 CREATE TABLE IF NOT EXISTS Course (
                     ID INTEGER PRIMARY KEY AUTOINCREMENT,
+                    Title TEXT NOT NULL,
                     Pages INTEGER NOT NULL,
                     Grade_ID INTEGER NOT NULL,
-                    Title TEXT NOT NULL,
                     FOREIGN KEY (Grade_ID) REFERENCES  Grade(ID)
+
                 )
             ''')
 
